@@ -127,7 +127,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // 1. هنا نكتب بيانات مشاريعك الثلاثة يدوياً لضمان ظهورها
+  
     const myProjects = [
       {
         Title: "Electronic Will Application",
@@ -177,48 +177,58 @@ const ProjectDetails = () => {
     );
   }
 
-  const projectUrl = `https://ekizr.com/project/${toSlug(project.Title)}`;
+const projectUrl = `https://rahaf-alwadaie.me/project/${toSlug(project.Title)}`;
 
   return (
     <>
-      <Helmet>
-        <title>{project.Title} — Eki Zulfar Rachman</title>
-        <meta
-          name="description"
-          content={
-            project.Description
-              ? project.Description.slice(0, 155)
-              : `Project ${project.Title} oleh Eki Zulfar Rachman — Frontend Web Developer.`
-          }
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={projectUrl} />
-        <meta
-          property="og:title"
-          content={`${project.Title} — Eki Zulfar Rachman`}
-        />
-        <meta
-          property="og:description"
-          content={project.Description?.slice(0, 155)}
-        />
-        <meta property="og:url" content={projectUrl} />
-        <meta property="og:type" content="website" />
-        {project.Img && <meta property="og:image" content={project.Img} />}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "CreativeWork",
-            "name": "${project.Title}",
-            "description": "${project.Description?.replace(/"/g, '\\"')}",
-            "url": "${projectUrl}",
-            "author": {
-              "@type": "Person",
-              "name": "Eki Zulfar Rachman",
-              "url": "https://ekizr.com"
-            }
-          }
-        `}</script>
-      </Helmet>
+    <Helmet>
+  <title>{project.Title} — Rahaf Al-Wadaie</title>
+
+  <meta
+    name="description"
+    content={
+      project.Description
+        ? project.Description.slice(0, 155)
+        : `Project ${project.Title} by Rahaf Al-Wadaie — COMPUTER SCIENTISTr.`
+    }
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href={`https://github.com/itsrav1/${toSlug(project.Title)}`}
+  />
+
+  <meta
+    property="og:title"
+    content={`${project.Title} — Rahaf Al-Wadaie`}
+  />
+
+  <meta
+    property="og:description"
+    content={project.Description?.slice(0, 155)}
+  />
+
+  <meta property="og:type" content="website" />
+
+  {project.Img && (
+    <meta property="og:image" content={project.Img} />
+  )}
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "${project.Title}",
+      "description": "${project.Description?.replace(/"/g, '\\"')}",
+      "author": {
+        "@type": "Person",
+        "name": "Rahaf Al-Wadaie"
+      }
+    }
+  `}</script>
+</Helmet>
 
       <div className="min-h-screen bg-[#030014] px-[2%] sm:px-0 relative overflow-hidden">
         <div className="fixed inset-0">
