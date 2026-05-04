@@ -40,7 +40,7 @@ const socialLinks = [
   {
     name: "TikTok",
     displayName: "Tiktok",
-    subText: "@itsrav__", 
+    subText: "@itsthecsrav", 
     icon: ({ className, ...props }) => (
       <svg
         width="24px"
@@ -64,7 +64,7 @@ const socialLinks = [
         </g>
       </svg>
     ),
-    url: "https://www.tiktok.com/@itsrav__?_r=1&_t=ZS-95yhBHWwXse",
+    url: "https://www.tiktok.com/@itsthecsrav?is_from_webapp=1&sender_device=pc",
     color: "black",
     gradient: "from-[#000000] via-[#25F4EE] to-[#FE2C55]",
   },

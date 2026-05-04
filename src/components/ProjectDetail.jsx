@@ -126,23 +126,44 @@ const ProjectDetails = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
-    // Cari project berdasarkan slug yang di-generate dari Title
-    const selectedProject = storedProjects.find(
-      (p) => toSlug(p.Title) === slug,
+
+    // 1. هنا نكتب بيانات مشاريعك الثلاثة يدوياً لضمان ظهورها
+    const myProjects = [
+      {
+        Title: "Electronic Will Application",
+        Description: "A Flutter-based secure application designed for creating and managing digital wills, featuring national identity integration and secure data handling.",
+        Github: "https://github.com/itsrav1/electronic-will-app",
+        TechStack: ["Flutter", "Dart", "Firebase", "SQL"],
+        Features: ["Digital Identity Integration", "Secure Asset Management", "High Privacy"],
+        Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/graduation-project.png" 
+      },
+      {
+        Title: "Airport Database System",
+        Description: "A sophisticated SQL database system for managing airport operations, including flight logistics, passenger data, and baggage management.",
+        Github: "https://github.com/itsrav1/Airport-Database-System",
+        TechStack: ["SQL", "Database Design", "Relational Algebra"],
+        Features: ["Flight Scheduling", "Baggage Tracking", "Data Integrity"],
+        Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/airport-db.png"
+      },
+      {
+        Title: "PacMan Game",
+        Description: "Classic Pac-Man game implementation using web technologies, featuring AI-driven ghost behavior and player movement logic.",
+        Github: "https://github.com/itsrav1/Pac-Man-game",
+        TechStack: ["HTML", "CSS", "JavaScript"],
+        Features: ["Collision Detection Logic","Ghost AI Implementation","Score Tracking System"],
+        Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/Pacman.png"
+      }
+    ];
+
+   
+    const selectedProject = myProjects.find(
+      (p) => toSlug(p.Title) === slug
     );
 
     if (selectedProject) {
-      const enhancedProject = {
-        ...selectedProject,
-        Features: selectedProject.Features || [],
-        TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || "https://github.com/EkiZR",
-      };
-      setProject(enhancedProject);
+      setProject(selectedProject);
     }
   }, [slug]);
-
   if (!project) {
     return (
       <div className="min-h-screen bg-[#030014] flex items-center justify-center">

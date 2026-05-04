@@ -118,7 +118,7 @@ const AboutPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2021-11-06");
+    const startDate = new Date("2024-8-16");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
@@ -161,7 +161,7 @@ const AboutPage = () => {
       color: "from-[#6366f1] to-[#a855f7]",
       value: totalProjects,
       label: "Total Projects",
-      description: "Innovative web solutions crafted",
+      description: "Hands-on projects built during my CS journey",
       animation: "fade-right",
     },
     {
@@ -169,7 +169,7 @@ const AboutPage = () => {
       color: "from-[#a855f7] to-[#6366f1]",
       value: totalCertificates,
       label: "Certificates",
-      description: "Professional skills validated",
+      description: "Technical certifications and achievements",
       animation: "fade-up",
     },
     {
@@ -177,7 +177,7 @@ const AboutPage = () => {
       color: "from-[#6366f1] to-[#a855f7]",
       value: YearExperience,
       label: "Years of Experience",
-      description: "Continuous learning journey",
+      description: "Freshly graduated from KKU",
       animation: "fade-left",
     },
   ], [totalProjects, totalCertificates, YearExperience]);
@@ -280,7 +280,7 @@ end development.
         </a>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-20px); }

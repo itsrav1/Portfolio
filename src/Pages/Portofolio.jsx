@@ -101,27 +101,33 @@ function a11yProps(index) {
     "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
-
-// techStacks tetap sama
 const techStacks = [
-  // علم البيانات والذكاء الاصطناعي (Data Science & AI)
-// مثال لاستخدام روابط مباشرة إذا لم تتوفر الصور عندك
-{ icon: "https://cdn.simpleicons.org/python/3776AB", language: "Python (Pandas)" },
-{ icon: "https://cdn.simpleicons.org/r/276DC3", language: "R Programming" },
-{ icon: "https://cdn.simpleicons.org/powerbi/F2C811", language: "Power BI" },
-  // تطوير الويب والتطبيقات (Development)
-  { icon: "reactjs.svg", language: "React" },
-  { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "flutter.svg", language: "Flutter / Dart" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
+  //(Programming Languages)
+  { icon: "https://cdn.simpleicons.org/python/3776AB", language: "Python" }, 
+  { icon: "https://cdn.simpleicons.org/openjdk/EA2D2E", language: "Java" },
+  { icon: "https://cdn.simpleicons.org/javascript/F7DF1E", language: "JavaScript" },
 
-  // قواعد البيانات والأدوات (Databases & Tools)
-  { icon: "sql.svg", language: "SQL (DDL/DML)" },
-  { icon: "supabase.svg", language: "Supabase" },
-  { icon: "github.svg", language: "GitHub" },
-  { icon: "unity.svg", language: "Unity Engine" },
+  //(Data Science & AI)
+  { icon: "https://cdn.simpleicons.org/pandas/150458", language: "Pandas" }, 
+  { icon: "https://cdn.simpleicons.org/r/276DC3", language: "R Programming" },
+  { icon: "https://img.icons8.com/color/48/000000/power-bi.png", language: "Power BI" },
+  { icon: "https://cdn.simpleicons.org/scikitlearn/F7931E", language: "Machine Learning" }, 
+
+  // (Databases)
+  { icon: "https://cdn.simpleicons.org/sqlite/003B57", language: "SQL (DDL/DML)" },
+  { icon: "https://cdn.simpleicons.org/mongodb/47A24A", language: "NoSQL" }, 
+  { icon: "https://cdn.simpleicons.org/supabase/3FCF8E", language: "Supabase" },
+
+  //(Development)
+  { icon: "https://cdn.simpleicons.org/react/61DAFB", language: "React" },
+  { icon: "https://cdn.simpleicons.org/flutter/02569B", language: "Flutter" },
+  { icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4", language: "Tailwind CSS" },
+  { icon: "https://cdn.simpleicons.org/unity/000000", language: "Unity Engine" }, 
+
+  //(Tools)
+  { icon: "https://img.icons8.com/?size=100&id=y5utoW4FUM92&format=png&color=000000", language: "Excel" }, 
+  { icon: "https://cdn.simpleicons.org/github/181717", language: "GitHub" }
 ];
-
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);

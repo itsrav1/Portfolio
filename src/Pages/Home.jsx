@@ -189,8 +189,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Computer Science graduate passionate about Data Analysis, AI, and Front-End Development.
-I build interactive web interfaces and turn data into meaningful insights.
+                    Freshly Graduated & Ready to Contribute.
                   </p>
 
                   {/* Tech Stack */}
