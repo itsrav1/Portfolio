@@ -7,10 +7,10 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("Home");
     
 const navItems = [
-    { href: "/Portfolio/#Home", label: "Home" },
-    { href: "/Portfolio/#About", label: "About" },
-    { href: "/Portfolio/#Portfolio", label: "Portfolio" },
-    { href: "/Portfolio/#Contact", label: "Contact" },
+    { href: "Portfolio/#Home", label: "Home" },
+    { href: "Portfolio/#About", label: "About" },
+    { href: "Portfolio/#Portfolio", label: "Portfolio" },
+    { href: "Portfolio/#Contact", label: "Contact" },
 ];
     useEffect(() => {
         const handleScroll = () => {
