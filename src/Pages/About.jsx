@@ -273,17 +273,17 @@ end development.
        
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
  
-  <a href="./#Portfolio" className="cursor-pointer">
+  <a href="#Portfolio" className="cursor-pointer">
     <StatCard {...statsData[0]} />
   </a>
 
 
-  <a href="./#Certificates" className="cursor-pointer">
+  <a href="#Certificates" className="cursor-pointer">
     <StatCard {...statsData[1]} />
   </a>
 
  
-  <a href="./#Experience" className="cursor-pointer">
+  <a href="#Experience" className="cursor-pointer">
     <StatCard {...statsData[2]} />
   </a>
 </div>

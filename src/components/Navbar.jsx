@@ -6,12 +6,12 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("Home");
     
-const navItems = [
-    { href: "Portfolio/#Home", label: "Home" },
-    { href: "Portfolio/#About", label: "About" },
-    { href: "Portfolio/#Portfolio", label: "Portfolio" },
-    { href: "Portfolio/#Contact", label: "Contact" },
-];
+ const navItems = [
+        { href: "#Home", label: "Home" },
+        { href: "#About", label: "About" },
+        { href: "#Portfolio", label: "Portfolio" },
+        { href: "#Contact", label: "Contact" },
+    ];
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
