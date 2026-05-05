@@ -50,7 +50,7 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
           
           <img
-  src="/portfolio/Photo.jpg"
+  src="/Portfolio/Photo.jpg"
   alt="Profile"
   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
   loading="lazy"
@@ -118,7 +118,7 @@ const AboutPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2024-8-16");
+    const startDate = new Date("2024/8/16");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
