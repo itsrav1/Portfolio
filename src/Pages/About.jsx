@@ -255,7 +255,7 @@ end development.
   <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
   Download CV
 </a>
-              <a href="#Portfolio" className="w-full lg:w-auto">
+              <a href="/#Portfolio" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -270,13 +270,23 @@ end development.
           <ProfileImage />
         </div>
 
-        <a href="#Portfolio">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
-            {statsData.map((stat) => (
-              <StatCard key={stat.label} {...stat} />
-            ))}
-          </div>
-        </a>
+       
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+ 
+  <a href="/#Portfolio" className="cursor-pointer">
+    <StatCard {...statsData[0]} />
+  </a>
+
+
+  <a href="/#Certificates" className="cursor-pointer">
+    <StatCard {...statsData[1]} />
+  </a>
+
+ 
+  <a href="/#Experience" className="cursor-pointer">
+    <StatCard {...statsData[2]} />
+  </a>
+</div>
       </div>
 
       <style>{`
