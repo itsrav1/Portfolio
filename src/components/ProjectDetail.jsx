@@ -146,13 +146,14 @@ const ProjectDetails = () => {
         Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/airport-db.png"
       },
       {
-        Title: "PacMan Game",
-        Description: "Classic Pac-Man game implementation using web technologies, featuring AI-driven ghost behavior and player movement logic.",
-        Github: "https://github.com/itsrav1/Pac-Man-game",
-        TechStack: ["HTML", "CSS", "JavaScript"],
-        Features: ["Collision Detection Logic","Ghost AI Implementation","Score Tracking System"],
-        Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/Pacman.png"
-      }
+  Title: "PacMan Game",
+  Description: "Classic Pac-Man game implementation using web technologies...",
+  Github: "https://github.com/itsrav1/Pac-Man-game",
+  ProjectLink: "https://itsrav1.github.io/Pac-Man-game/",
+  TechStack: ["HTML", "CSS", "JavaScript"],
+  Features: ["Collision Detection Logic","Ghost AI Implementation","Score Tracking System"],
+  Img: "https://vejsumhjdagbugzufxor.supabase.co/storage/v1/object/public/projects/Pacman.png"
+}
     ];
 
    
