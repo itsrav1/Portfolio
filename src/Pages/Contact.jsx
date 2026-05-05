@@ -51,7 +51,7 @@ const ContactPage = () => {
       submitData.append('name', formData.name);
       submitData.append('email', formData.email);
       submitData.append('message', formData.message);
-      submitData.append('_subject', 'New Portfolio Message from Raheefa');
+      submitData.append('_subject', 'New Portfolio Message from Rahaf');
       submitData.append('_captcha', 'false'); 
       submitData.append('_template', 'table'); 
 

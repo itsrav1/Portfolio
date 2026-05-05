@@ -143,7 +143,7 @@ const Home = () => {
         <title>Rahaf Alwadaie — The most genius girl in the world</title>
      <meta name="description" content="Portfolio of Rahaf Alwadaie, a Computer Science graduate specializing in Intelligent Systems, Data Analysis, and AI." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rahaf-portfolio.vercel.app" /> 
+  <link rel="canonical" href="https://rahaf-Portfolio.vercel.app" /> 
   
   <meta property="og:title" content="Rahaf Alwadaie — COMPUTER SCIENTIST" />
   <meta property="og:description" content="Building intelligent solutions with code and data. Specializing in AI and Data Analysis." />
@@ -155,7 +155,7 @@ const Home = () => {
     "@type": "Person",
     "name": "Rahaf AlWadaie",
     "jobTitle": "Computer Scientist",
-    "url": "https://rahaf-portfolio.vercel.app",
+    "url": "https://rahaf-Portfolio.vercel.app",
     "sameAs": [
       "https://github.com/ra6hf",
       "https://linkedin.com/in/rahaf-alwadai-929601250",
