@@ -16,7 +16,8 @@ const Navbar = () => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
             const sections = navItems.map(item => {
-                const section = document.querySelector(item.href);
+                const cleanHref = "#" + item.href.split("#")[1];
+const section = document.querySelector(cleanHref);
                 if (section) {
                     return {
                         id: item.href.replace("#", ""),
@@ -50,19 +51,25 @@ const Navbar = () => {
             document.body.style.overflow = 'unset';
         }
     }, [isOpen]);
+const scrollToSection = (e, href) => {
+    e.preventDefault();
 
-    const scrollToSection = (e, href) => {
-        e.preventDefault();
-        const section = document.querySelector(href);
-        if (section) {
-            const top = section.offsetTop - 100;
-            window.scrollTo({
-                top: top,
-                behavior: "smooth"
-            });
-        }
-        setIsOpen(false);
-    };
+    const cleanHref = href.includes("#")
+        ? "#" + href.split("#")[1]
+        : href;
+
+    const section = document.querySelector(cleanHref);
+
+    if (section) {
+        const top = section.offsetTop - 100;
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
+    }
+
+    setIsOpen(false);
+};
 
     return (
         <nav

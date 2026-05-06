@@ -255,15 +255,17 @@ end development.
   <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
   Download CV
 </a>
-             <a href="#Portfolio" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 "
-              >
-                <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
-              </button>
-              </a>
+            <button
+  onClick={() => {
+    const section = document.querySelector("#Portfolio");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10"
+>
+  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+</button>
             </div>
           </div>
 
@@ -273,19 +275,44 @@ end development.
        
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
  
-  <a href="#Portfolio" className="cursor-pointer">
-    <StatCard {...statsData[0]} />
-  </a>
+ <div
+  onClick={(e) => {
+    e.preventDefault();
+    const section = document.querySelector("#Portfolio");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="cursor-pointer"
+>
+  <StatCard {...statsData[0]} />
+</div>
 
-
-  <a href="#Certificates" className="cursor-pointer">
-    <StatCard {...statsData[1]} />
-  </a>
-
+  <div
+  onClick={(e) => {
+    e.preventDefault();
+    const section = document.querySelector("#Certificates");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="cursor-pointer"
+>
+  <StatCard {...statsData[2]} />
+</div>
  
-  <a href="#Experience" className="cursor-pointer">
-    <StatCard {...statsData[2]} />
-  </a>
+  <div
+  onClick={(e) => {
+    e.preventDefault();
+    const section = document.querySelector("#Experience");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="cursor-pointer"
+>
+  <StatCard {...statsData[3]} />
+</div>
 </div>
       </div>
 
