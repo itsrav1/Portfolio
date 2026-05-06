@@ -15,19 +15,19 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
-            const sections = navItems.map(item => {
-                const cleanHref = "#" + item.href.split("#")[1];
-const section = document.querySelector(cleanHref);
-                if (section) {
-                    return {
-                        id: item.href.replace("#", ""),
-                        offset: section.offsetTop - 550,
-                        height: section.offsetHeight
-                    };
-                }
-                return null;
-            }).filter(Boolean);
+          const sections = navItems.map(item => {
+    const id = item.href.replace("#", "");
+    const section = document.getElementById(id);
 
+    if (section) {
+        return {
+            id,
+            offset: section.offsetTop - 550,
+            height: section.offsetHeight
+        };
+    }
+    return null;
+}).filter(Boolean);
             const currentPosition = window.scrollY;
             const active = sections.find(section => 
                 currentPosition >= section.offset && 
@@ -58,7 +58,8 @@ const scrollToSection = (e, href) => {
         ? "#" + href.split("#")[1]
         : href;
 
-    const section = document.querySelector(cleanHref);
+    const id = item.href.replace("#", "");
+const section = document.getElementById(id);
 
     if (section) {
         const top = section.offsetTop - 100;

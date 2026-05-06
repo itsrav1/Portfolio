@@ -298,7 +298,7 @@ end development.
   }}
   className="cursor-pointer"
 >
-  <StatCard {...statsData[2]} />
+  <StatCard {...statsData[1]} />
 </div>
  
   <div
@@ -311,7 +311,7 @@ end development.
   }}
   className="cursor-pointer"
 >
-  <StatCard {...statsData[3]} />
+  <StatCard {...statsData[2]} />
 </div>
 </div>
       </div>
