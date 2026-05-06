@@ -54,12 +54,9 @@ const Navbar = () => {
 const scrollToSection = (e, href) => {
     e.preventDefault();
 
-    const cleanHref = href.includes("#")
-        ? "#" + href.split("#")[1]
-        : href;
+    const id = href.replace("#", ""); // ✅ استخدم href بدل item
 
-    const id = item.href.replace("#", "");
-const section = document.getElementById(id);
+    const section = document.getElementById(id);
 
     if (section) {
         const top = section.offsetTop - 100;
