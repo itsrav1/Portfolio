@@ -278,10 +278,17 @@ end development.
   <div
     onClick={() => {
       const tabs = document.querySelectorAll('.MuiTab-root');
-      if (tabs[0]) tabs[0].click();
-      setTimeout(() => {
-        document.getElementById("PortfolioSection")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      if (tabs[0]) {
+        tabs[0].click(); // تغيير التبويب فوراً
+        setTimeout(() => {
+          const section = document.getElementById("PortfolioSection");
+          if (section) {
+            const yOffset = -100; // مساحة إضافية للراحة
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 150); // وقت كافٍ للمتصفح ليعالج التغيير
+      }
     }}
     className="cursor-pointer"
   >
@@ -292,24 +299,38 @@ end development.
   <div
     onClick={() => {
       const tabs = document.querySelectorAll('.MuiTab-root');
-      if (tabs[1]) tabs[1].click();
-      setTimeout(() => {
-        document.getElementById("CertificatesSection")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      if (tabs[1]) {
+        tabs[1].click();
+        setTimeout(() => {
+          const section = document.getElementById("CertificatesSection");
+          if (section) {
+            const yOffset = -100;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 150);
+      }
     }}
     className="cursor-pointer"
   >
     <StatCard {...statsData[1]} />
   </div>
 
-  {/* كرت الخبرة */}
+  {/* كرت الخبرة/التقنيات */}
   <div
     onClick={() => {
       const tabs = document.querySelectorAll('.MuiTab-root');
-      if (tabs[2]) tabs[2].click();
-      setTimeout(() => {
-        document.getElementById("ExperienceSection")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      if (tabs[2]) {
+        tabs[2].click();
+        setTimeout(() => {
+          const section = document.getElementById("ExperienceSection");
+          if (section) {
+            const yOffset = -100;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 150);
+      }
     }}
     className="cursor-pointer"
   >
