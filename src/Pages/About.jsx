@@ -277,11 +277,11 @@ end development.
   {/* كرت المشاريع */}
   <div
     onClick={() => {
-      const tab = document.getElementById("PortfolioTab");
-      if (tab) {
-        tab.click(); // يفتح تبويب المشاريع
-        tab.scrollIntoView({ behavior: "smooth" });
-      }
+      const tabs = document.querySelectorAll('.MuiTab-root');
+      if (tabs[0]) tabs[0].click();
+      setTimeout(() => {
+        document.getElementById("PortfolioSection")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }}
     className="cursor-pointer"
   >
@@ -291,11 +291,11 @@ end development.
   {/* كرت الشهادات */}
   <div
     onClick={() => {
-      const tab = document.getElementById("CertificatesTab");
-      if (tab) {
-        tab.click(); // يفتح تبويب الشهادات
-        tab.scrollIntoView({ behavior: "smooth" });
-      }
+      const tabs = document.querySelectorAll('.MuiTab-root');
+      if (tabs[1]) tabs[1].click();
+      setTimeout(() => {
+        document.getElementById("CertificatesSection")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }}
     className="cursor-pointer"
   >
@@ -305,11 +305,11 @@ end development.
   {/* كرت الخبرة */}
   <div
     onClick={() => {
-      const tab = document.getElementById("ExperienceTab");
-      if (tab) {
-        tab.click(); // يفتح تبويب الخبرة/التقنيات
-        tab.scrollIntoView({ behavior: "smooth" });
-      }
+      const tabs = document.querySelectorAll('.MuiTab-root');
+      if (tabs[2]) tabs[2].click();
+      setTimeout(() => {
+        document.getElementById("ExperienceSection")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }}
     className="cursor-pointer"
   >

@@ -293,20 +293,18 @@ export default function FullWidthTabs() {
               },
             }}
           >
-           <Tab
-  id="PortfolioTab"
+
+<Tab
   icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />}
   label="Projects"
   {...a11yProps(0)}
 />
 <Tab
-  id="CertificatesTab"
   icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
   label="Certificates"
   {...a11yProps(1)}
 />
 <Tab
-  id="ExperienceTab"
   icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />}
   label="Tech Stack"
   {...a11yProps(2)}
@@ -319,9 +317,9 @@ export default function FullWidthTabs() {
           index={value}
           onChangeIndex={setValue}
         >
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
+        <TabPanel value={value} index={0} dir={theme.direction}>
+  <div id="PortfolioSection" className="container mx-auto flex justify-center items-center overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
                 {displayedProjects.map((project, index) => (
                   <div
                     key={project.id || index}
@@ -350,8 +348,8 @@ export default function FullWidthTabs() {
           </TabPanel>
 
           <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
+  <div id="CertificatesSection" className="container mx-auto flex justify-center items-center overflow-hidden">
+    <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
                 {displayedCertificates.map((certificate, index) => (
                   <div
                     key={certificate.id || index}
@@ -374,8 +372,8 @@ export default function FullWidthTabs() {
           </TabPanel>
 
           <TabPanel value={value} index={2} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+  <div id="ExperienceSection" className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
                 {techStacks.map((stack, index) => (
                   <div
                     key={index}
