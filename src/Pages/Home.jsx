@@ -147,7 +147,7 @@ const Home = () => {
   
   <meta property="og:title" content="Rahaf Alwadaie — COMPUTER SCIENTIST" />
   <meta property="og:description" content="Building intelligent solutions with code and data. Specializing in AI and Data Analysis." />
-  <meta property="og:url" content="https://rahaf-portfolio.vercel.app" />
+  <meta property="og:url" content="https://rahaf-Portfolio.vercel.app" />
   <meta property="og:type" content="website" />
        <script type="application/ld+json">{`
   {
