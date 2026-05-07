@@ -274,45 +274,47 @@ end development.
 
        
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
- 
- <div
-  onClick={(e) => {
-    e.preventDefault();
-    const section = document.querySelector("#Portfolio");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="cursor-pointer"
->
-  <StatCard {...statsData[0]} />
-</div>
+  {/* كرت المشاريع */}
+  <div
+    onClick={() => {
+      const tab = document.getElementById("PortfolioTab");
+      if (tab) {
+        tab.click(); // يفتح تبويب المشاريع
+        tab.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="cursor-pointer"
+  >
+    <StatCard {...statsData[0]} />
+  </div>
 
+  {/* كرت الشهادات */}
   <div
-  onClick={(e) => {
-    e.preventDefault();
-    const section = document.querySelector("#Certificates");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="cursor-pointer"
->
-  <StatCard {...statsData[1]} />
-</div>
- 
+    onClick={() => {
+      const tab = document.getElementById("CertificatesTab");
+      if (tab) {
+        tab.click(); // يفتح تبويب الشهادات
+        tab.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="cursor-pointer"
+  >
+    <StatCard {...statsData[1]} />
+  </div>
+
+  {/* كرت الخبرة */}
   <div
-  onClick={(e) => {
-    e.preventDefault();
-    const section = document.querySelector("#Experience");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="cursor-pointer"
->
-  <StatCard {...statsData[2]} />
-</div>
+    onClick={() => {
+      const tab = document.getElementById("ExperienceTab");
+      if (tab) {
+        tab.click(); // يفتح تبويب الخبرة/التقنيات
+        tab.scrollIntoView({ behavior: "smooth" });
+      }
+    }}
+    className="cursor-pointer"
+  >
+    <StatCard {...statsData[2]} />
+  </div>
 </div>
       </div>
 

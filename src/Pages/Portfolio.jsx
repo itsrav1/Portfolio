@@ -293,21 +293,24 @@ export default function FullWidthTabs() {
               },
             }}
           >
-            <Tab
-              icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Projects"
-              {...a11yProps(0)}
-            />
-            <Tab
-              icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Certificates"
-              {...a11yProps(1)}
-            />
-            <Tab
-              icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Tech Stack"
-              {...a11yProps(2)}
-            />
+           <Tab
+  id="PortfolioTab"
+  icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />}
+  label="Projects"
+  {...a11yProps(0)}
+/>
+<Tab
+  id="CertificatesTab"
+  icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
+  label="Certificates"
+  {...a11yProps(1)}
+/>
+<Tab
+  id="ExperienceTab"
+  icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />}
+  label="Tech Stack"
+  {...a11yProps(2)}
+/>
           </Tabs>
         </AppBar>
 
